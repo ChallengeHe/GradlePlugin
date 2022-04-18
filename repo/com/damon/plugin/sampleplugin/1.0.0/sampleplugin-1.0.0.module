@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.damon.plugin",
+    "module": "samplePlugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "samplePlugin-1.0.0.jar",
+          "url": "samplePlugin-1.0.0.jar",
+          "size": 8267,
+          "sha512": "39f6ac3226826cebb87f521b2ee10f2435e69cbacdaba0cc394362ac16895e75d11d417df1ccf86e039c5b67fa223f6b525589e947a4ceb85f9ea5db2d6e2c68",
+          "sha256": "b617065ffee1b8d04fa05aec6ea3ecb407b8c2a26994a543775a0af655eb6610",
+          "sha1": "cfb8989a41c5599c8d293f98d5da464e63d03d61",
+          "md5": "8d608cf26b147bc750fbfcf1c3fbc543"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "samplePlugin-1.0.0.jar",
+          "url": "samplePlugin-1.0.0.jar",
+          "size": 8267,
+          "sha512": "39f6ac3226826cebb87f521b2ee10f2435e69cbacdaba0cc394362ac16895e75d11d417df1ccf86e039c5b67fa223f6b525589e947a4ceb85f9ea5db2d6e2c68",
+          "sha256": "b617065ffee1b8d04fa05aec6ea3ecb407b8c2a26994a543775a0af655eb6610",
+          "sha1": "cfb8989a41c5599c8d293f98d5da464e63d03d61",
+          "md5": "8d608cf26b147bc750fbfcf1c3fbc543"
+        }
+      ]
+    }
+  ]
+}

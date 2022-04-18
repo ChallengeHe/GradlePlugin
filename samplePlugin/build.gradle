@@ -1,0 +1,48 @@
+plugins {
+    id 'java-library'
+    id 'groovy'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+version '1.0.0'
+group 'com.damon.plugin'
+gradlePlugin {
+    plugins {
+        JavaPlugin {
+            id = 'com.damon.JavaPlugin'
+            implementationClass = 'com.damon.gradle.sampleplugin.JavaPlugin'
+        }
+        KTPlugin {
+            id = 'com.damon.KTPlugin'
+            implementationClass = 'com.damon.gradle.sampleplugin.KTPlugin'
+        }
+        GroovyPlugin {
+            id = 'com.damon.GroovyPlugin'
+            implementationClass = 'com.damon.gradle.sampleplugin.GroovyPlugin'
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'com.damon.plugin'
+                artifactId = 'sampleplugin'
+                version = '1.0.0'
+                from components.java
+            }
+        }
+        repositories {
+            maven {
+                url = '../repo'
+            }
+        }
+    }
+}
